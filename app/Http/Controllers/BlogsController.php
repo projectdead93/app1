@@ -87,7 +87,7 @@ class BlogsController extends Controller
      */
     public function searchByName($name)
     {
-        return Product::where('Name', 'like', '%' . $name . '%')->get();
+        return Blogs::where('Name', 'like', '%' . $name . '%')->get();
     }
 
     /**
@@ -98,7 +98,7 @@ class BlogsController extends Controller
      */
     public function searchBySlug($slug)
     {
-        return Product::where('Description', 'like', '%' . $slug . '%')->get();
+        return Blogs::where('Description', 'like', '%' . $slug . '%')->get();
     }
 }
 
